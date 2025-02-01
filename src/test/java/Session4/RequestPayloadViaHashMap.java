@@ -32,6 +32,7 @@ public class RequestPayloadViaHashMap {
 				.body("grade",equalTo("N/A"))
 				.body("subjects[0]", equalTo("Computer Science"))
 				.body("subjects[1]", equalTo("Psycology"))
+				.header("Content-Type","application/json")
 				.log().all();
 			
 			System.out.println("Test Case Execution Passed.");
