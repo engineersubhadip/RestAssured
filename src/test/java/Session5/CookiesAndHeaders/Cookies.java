@@ -11,7 +11,7 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 import io.restassured.response.Response;
-public class HeadersAndCookies {
+public class Cookies {
 	
 //	@Test
 	public void testCase_CookiesAndHeaders() {
