@@ -21,13 +21,27 @@ public class Logging {
 		}
 	}
 	
-	@Test(priority=2)
+//	@Test(priority=2)
 	public void testCase_PrintCookies() {
 		try {
 			when()
 				.get("https://www.google.com/")
 			.then()
 				.log().cookies();
+			
+		} catch (Exception e ) {
+			System.out.println("Test case testCase_PrintResponseBody failed.");
+			Assert.fail();
+		}
+	}
+	
+	@Test(priority=3)
+	public void testCase_PrintHeaders() {
+		try {
+			when()
+				.get("https://www.google.com/")
+			.then()
+				.log().headers();
 			
 		} catch (Exception e ) {
 			System.out.println("Test case testCase_PrintResponseBody failed.");
