@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 public class ParsingJSONResponseData {
 	
 	@Test(priority=1) // Approach-1 {Applicable to Small data set, and you want to validate some fields in JSON}
-	public void testCase_TestJSONResponse() {
+	public void testCase_TestJSONResponse1() {
 		
 		when()
 			.get("http://localhost:3000/store")
