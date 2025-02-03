@@ -1,0 +1,18 @@
+Task:
+1. Print the store's name and address (street, city, and zipcode).
+2. Calculate the total price of the books.
+
+{
+  "store": {
+    "name": "My Bookstore",
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "zipcode": "10001"
+    },
+    "books": [
+      { "title": "Book 1", "price": 100 },
+      { "title": "Book 2", "price": 200 }
+    ]
+  }
+}

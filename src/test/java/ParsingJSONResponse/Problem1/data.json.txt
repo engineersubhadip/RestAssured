@@ -1,0 +1,14 @@
+{
+  "store": {
+    "name": "My Bookstore",
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "zipcode": "10001"
+    },
+    "books": [
+      { "title": "Book 1", "price": 100 },
+      { "title": "Book 2", "price": 200 }
+    ]
+  }
+}
