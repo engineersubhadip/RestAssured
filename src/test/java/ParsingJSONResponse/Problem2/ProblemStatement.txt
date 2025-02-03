@@ -1,0 +1,45 @@
+Task:-
+-----------------
+
+1. Print the name and salary of each employee. - Done
+2. Print the department name and location for each employee. - Done
+3. Calculate the average salary of all employees. - Done
+4. Print the skills of each employee in a comma-separated string. - Done
+
+{
+  "employees": [
+    {
+      "id": 101,
+      "name": "Alice",
+      "age": 30,
+      "department": {
+        "name": "HR",
+        "location": "Building A"
+      },
+      "skills": ["Java", "Python", "SQL"],
+      "salary": 75000
+    },
+    {
+      "id": 102,
+      "name": "Bob",
+      "age": 28,
+      "department": {
+        "name": "IT",
+        "location": "Building B"
+      },
+      "skills": ["JavaScript", "React", "Node.js"],
+      "salary": 85000
+    },
+    {
+      "id": 103,
+      "name": "Charlie",
+      "age": 35,
+      "department": {
+        "name": "Marketing",
+        "location": "Building C"
+      },
+      "skills": ["SEO", "Content Writing", "Social Media"],
+      "salary": 60000
+    }
+  ]
+}
