@@ -1,15 +1,14 @@
 package Session6;
 
+import static io.restassured.RestAssured.when;
+import static org.hamcrest.Matchers.equalTo;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
-
-import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
-
-import org.json.JSONObject;
 
 public class ParsingJSONResponseData {
 	
@@ -49,10 +48,24 @@ public class ParsingJSONResponseData {
 		
 		//Print the size of the JSON Array :-
 		System.out.println(json.getJSONArray("book").length());
-		
+		//Print all the Book title :-
 		for (int i=0; i<json.getJSONArray("book").length(); i++) {
 			String currEle = json.getJSONArray("book").getJSONObject(i).get("title").toString();
 			System.out.println(currEle);
 		}
+		//Find total Price of books.
+		
+		double total = 0;
+		
+		JSONArray arr = json.getJSONArray("book");
+		
+		for (int i=0; i<arr.length(); i++) {
+//			double currPrice = Double.parseDouble(arr.getJSONObject(i).get("price").toString());
+			// If we know, all the prices are in decimal then :-
+			double currPrice = arr.getJSONObject(i).getDouble("price");
+			total += currPrice;
+		}
+		
+		System.out.println("Total Price: "+total);
 	}
 }
