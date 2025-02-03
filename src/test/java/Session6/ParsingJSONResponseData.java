@@ -63,6 +63,7 @@ public class ParsingJSONResponseData {
 //			double currPrice = Double.parseDouble(arr.getJSONObject(i).get("price").toString());
 			// If we know, all the prices are in decimal then :-
 			double currPrice = arr.getJSONObject(i).getDouble("price");
+			System.out.println("CurrPrice is: "+currPrice);
 			total += currPrice;
 		}
 		
