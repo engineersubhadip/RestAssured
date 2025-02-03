@@ -51,7 +51,7 @@ public class ParsingJSONResponseData {
 		System.out.println(json.getJSONArray("book").length());
 		
 		for (int i=0; i<json.getJSONArray("book").length(); i++) {
-			String currEle = json.getJSONArray("book").getJSONObject(i).getString("title");
+			String currEle = json.getJSONArray("book").getJSONObject(i).get("title").toString();
 			System.out.println(currEle);
 		}
 	}
