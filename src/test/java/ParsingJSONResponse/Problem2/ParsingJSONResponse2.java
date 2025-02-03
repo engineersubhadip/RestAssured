@@ -3,8 +3,6 @@ package ParsingJSONResponse.Problem2;
 import static io.restassured.RestAssured.when;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
@@ -44,20 +42,21 @@ public class ParsingJSONResponse2 {
 			String empDeptLoc = employee.getJSONObject(i).optJSONObject("department").optString("location");
 			JSONArray empSkills = employee.getJSONObject(i).optJSONArray("skills");
 			
-			String finalSkills = "";
+//			String finalSkills = "";
+			StringBuilder finalSkills = new StringBuilder();
 			
 			for (int j = 0; j < empSkills.length(); j++) {
 				String currSkill = empSkills.getString(j);
 				if (j != empSkills.length() - 1) {
-					finalSkills += currSkill;
-					finalSkills += ", ";
+					finalSkills.append(currSkill);
+					finalSkills.append(", ");
 				} else {
-					finalSkills += currSkill;
+					finalSkills.append(currSkill);
 				}
 			}
 
 			System.out.println("Employee Name: " + empName + " Employee Salary: " + empSal + " Department Name: "
-					+ empDeptName + " Department Location: " + empDeptLoc + " Employee Skills: " + finalSkills);
+					+ empDeptName + " Department Location: " + empDeptLoc + " Employee Skills: " + finalSkills.toString());
 		}
 
 		System.out.println("Average Salary of All Employees: " + avgSalary);
