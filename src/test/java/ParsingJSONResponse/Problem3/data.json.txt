@@ -1,0 +1,40 @@
+{
+  "company": "TechCorp",
+  "location": "New York",
+  "employees": [
+    {
+      "id": "101",
+      "name": "Alice",
+      "age": 30,
+      "contact": {
+        "email": "alice@techcorp.com",
+        "phone": "123-456-7890"
+      },
+      "projects": [
+        {
+          "projectName": "Automation Suite",
+          "status": "Completed"
+        },
+        {
+          "projectName": "AI Research",
+          "status": "Ongoing"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "name": "Bob",
+      "age": 28,
+      "contact": {
+        "email": "bob@techcorp.com",
+        "phone": "987-654-3210"
+      },
+      "projects": [
+        {
+          "projectName": "Cloud Migration",
+          "status": "Ongoing"
+        }
+      ]
+    }
+  ]
+}
