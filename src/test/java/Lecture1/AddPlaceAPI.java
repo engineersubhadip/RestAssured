@@ -38,6 +38,7 @@ public class AddPlaceAPI {
 			.assertThat()
 			.statusCode(200)
 			.body("scope",equalTo("APP"))
+			.header("Server", "Apache/2.4.52 (Ubuntu)")
 			.log().all();
 	}
 
