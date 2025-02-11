@@ -1,7 +1,10 @@
 package Lecture1;
 
-import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import io.restassured.RestAssured;
 
 public class AddPlaceAPI {
 
@@ -34,6 +37,7 @@ public class AddPlaceAPI {
 		.then()
 			.assertThat()
 			.statusCode(200)
+			.body("scope",equalTo("APP"))
 			.log().all();
 	}
 
