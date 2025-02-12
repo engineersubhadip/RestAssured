@@ -43,6 +43,7 @@ public class ParseJSONResponse {
 			if (currTitle.equalsIgnoreCase("rpa")) {
 				int soldCopies = js.getInt("courses["+i+"].copies");
 				System.out.println("Copies Sold: "+soldCopies);
+				break;
 			}
 		}
 		
