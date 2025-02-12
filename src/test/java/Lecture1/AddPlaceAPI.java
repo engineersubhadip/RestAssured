@@ -35,8 +35,7 @@ public class AddPlaceAPI {
 		.when() // resource and http methods will always go under when method
 			.post("/maps/api/place/add/json")
 		.then()
-			.assertThat()
-			.statusCode(200)
+			.statusCode(205)
 			.body("scope",equalTo("APP"))
 			.header("Server", "Apache/2.4.52 (Ubuntu)")
 			.log().all();
