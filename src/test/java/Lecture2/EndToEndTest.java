@@ -57,6 +57,7 @@ public class EndToEndTest {
 			.get("/maps/api/place/get/json")
 		.then()
 			.statusCode(200)
+			.body("address", equalTo("70 Summer walk, USA"))
 			.log().all();
 	}
 
